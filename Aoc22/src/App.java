@@ -11,39 +11,41 @@ public class App {
         // SETUP
         File file = new File("src/1a.txt");
         Scanner scan = new Scanner(file);
-        int sum= 0;
+        int elf_calories = 0;
 
+        // Podium
         List<Integer> top3 = new ArrayList<Integer>();
-
         top3.add(0);
         top3.add(0);
         top3.add(0);
 
-        // for(int x : top3) {
-        //     System.out.println(x);
-        // }
-
+        
         while(scan.hasNextLine()) {
+            // podium is sorted
             Collections.sort(top3);
 
             String s = scan.nextLine();
+
+            // add calories of elf til you encounter an empty line
             if (s.length() > 0) {
-                sum += Integer.parseInt(s);
+                elf_calories += Integer.parseInt(s);
             }
+
+            // when you encounter an empty line, see if it enters the podium
             if (s.length() == 0) {
                 for(int i = 0; i < 3; i++){
-                    if (sum > top3.get(i)) {
+                    if (elf_calories > top3.get(i)) {
                         top3.remove(i);
-                        top3.add(sum);
+                        top3.add(elf_calories);
                         break;
                     }
                 }
-                sum = 0;
+                elf_calories = 0;
             }
         }
         
+        // result
         System.out.println(top3.get(0) + top3.get(1) + top3.get(2));
-        // System.out.println(top3[0] + " " + top3[1] + " " + top3[2]);
         scan.close();
     }
 }
