@@ -33,12 +33,10 @@ public class App {
 
             // when you encounter an empty line, see if it enters the podium
             if (s.length() == 0) {
-                for(int i = 0; i < 3; i++){
-                    if (elf_calories > top3.get(i)) {
-                        top3.remove(i);
-                        top3.add(elf_calories);
-                        break;
-                    }
+                if (elf_calories > top3.get(0))
+                {
+                    top3.remove(0);
+                    top3.add(elf_calories);
                 }
                 elf_calories = 0;
             }
