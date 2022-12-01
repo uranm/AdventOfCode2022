@@ -6,7 +6,8 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
-
+        // DAY 1 //
+        
         // SETUP
         File file = new File("src/1a.txt");
         Scanner scan = new Scanner(file);
