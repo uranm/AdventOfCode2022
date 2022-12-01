@@ -26,18 +26,20 @@ public class App {
 
             String s = scan.nextLine();
 
-            // add calories of elf til you encounter an empty line
+            // accumulate elf_calories til you encounter an empty line
             if (s.length() > 0) {
                 elf_calories += Integer.parseInt(s);
             }
 
-            // when you encounter an empty line, see if it enters the podium
+            // once you arrive at an empty line, see if the elf_calories makes the podium
             if (s.length() == 0) {
                 if (elf_calories > top3.get(0))
                 {
                     top3.remove(0);
                     top3.add(elf_calories);
                 }
+                
+            // get ready to count next elf's calories
                 elf_calories = 0;
             }
         }
