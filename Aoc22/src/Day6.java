@@ -12,7 +12,7 @@ public class Day6 {
     
     String input = scan.next();
 
-    int markerSize = 14; // for part 1; while = 14 for part 2
+    int markerSize = 4; // for part 1; while = 14 for part 2
     int res = 0;
 
     int k = input.length() - markerSize;
