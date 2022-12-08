@@ -6,12 +6,12 @@ import java.util.Set;
 public class Day8 {
 
     // counts indices in a string which hold a visible value
-    static Set sideVisibility(int row, String string) {
+    static Set<String> sideVisibility(int row, String string) {
         int k = string.length();
         int leftHigh = 0;
         int rightHigh = string.length()-1;
 
-        Set visibleIndices = new HashSet();
+        Set<String> visibleIndices = new HashSet<String>();
         visibleIndices.add(row + "-" + 0);
         visibleIndices.add(row + "-" + (k-1));
 
@@ -73,15 +73,15 @@ public class Day8 {
         File file = new File("src/inputs/8.txt");
         Scanner scan = new Scanner(file);
 
-        Set visibleCoordinates = new HashSet();
+        Set<String> visibleCoordinates = new HashSet<String>();
 
         // populate hashSet with side-visible coordinates
         for(int i = 0; i < 99; i++) {
-            for(Object x : sideVisibility(i, scan.nextLine())) {
+            for(String x : sideVisibility(i, scan.nextLine())) {
                 visibleCoordinates.add(x);
             }
         }
-
+        scan.close();
         // store columns into a list of strings
         scan = new Scanner(file);
 
@@ -105,7 +105,7 @@ public class Day8 {
                 visibleCoordinates.add(flipCoordinate(x.toString()));
             }           
         }
-
+        scan.close();
         // part 1
         System.out.println(visibleCoordinates.size());
 
@@ -113,7 +113,7 @@ public class Day8 {
         int res = 0;
 
         // part 2
-        
+
         for(int i = 0; i < 99; i++) {
             String s = scan.next();
             for(int j = 0; j < 99; j++) {
