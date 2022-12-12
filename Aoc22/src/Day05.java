@@ -1,7 +1,7 @@
 import java.io.File;
 import java.util.Scanner;
 
-public class Day5 {
+public class Day05 {
 
     // outputs the reflection a string
     public static String reverseString(String str) {
