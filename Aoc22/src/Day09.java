@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 
-public class Day9 {
+public class Day09 {
 
     // tranform input into coordinates of the form x_y, and add them to a list allCoords
     public static void inputToCoordinates(String move, String current, List<String> allCoords) {
