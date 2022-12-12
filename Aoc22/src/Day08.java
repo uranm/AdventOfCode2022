@@ -3,7 +3,7 @@ import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
-public class Day8 {
+public class Day08 {
 
     // counts indices in a string which hold a visible value
     static Set<String> sideVisibility(int row, String string) {
