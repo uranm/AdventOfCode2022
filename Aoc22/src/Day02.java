@@ -1,7 +1,7 @@
 import java.io.File;
 import java.util.Scanner;
 
-public class Day2 {
+public class Day02 {
 
     // Transform the hands played into integers
     public static int[] roundToInt(String round) {
