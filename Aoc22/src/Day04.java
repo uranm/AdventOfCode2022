@@ -1,7 +1,7 @@
 import java.io.File;
 import java.util.Scanner;
 
-public class Day4 {
+public class Day04 {
 
     // (part1) checks if two intervals [a,b] and [c,d] are nested
 
