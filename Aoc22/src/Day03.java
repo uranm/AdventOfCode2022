@@ -1,7 +1,7 @@
 import java.io.File;
 import java.util.Scanner;
 
-public class Day3 {
+public class Day03 {
 
     // Find common letter of three strings
     public static int findBadgePriority(String first, String second, String third) {
